@@ -50,6 +50,11 @@ namespace TestBench
             }
         }
 
+        /// <summary>
+        /// Event handler for btnObservations Clicked event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnObservations_Click(object sender, EventArgs e)
         {
             ConfigurationBuilder configBuilder = new ConfigurationBuilder();
