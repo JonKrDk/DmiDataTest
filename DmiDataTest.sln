@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBench", "TestBench\TestBench.csproj", "{89136372-5F32-4C32-8328-10C13A6C6806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DmiDataLib", "DmiDataLib\DmiDataLib.csproj", "{F4185E1A-CE04-4402-9922-A4DE8A133FD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89136372-5F32-4C32-8328-10C13A6C6806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89136372-5F32-4C32-8328-10C13A6C6806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89136372-5F32-4C32-8328-10C13A6C6806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89136372-5F32-4C32-8328-10C13A6C6806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4185E1A-CE04-4402-9922-A4DE8A133FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4185E1A-CE04-4402-9922-A4DE8A133FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4185E1A-CE04-4402-9922-A4DE8A133FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4185E1A-CE04-4402-9922-A4DE8A133FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17A95808-F1E5-4174-B9BE-4B8A165BF1C1}
+	EndGlobalSection
+EndGlobal
