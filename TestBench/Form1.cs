@@ -20,7 +20,7 @@ namespace TestBench
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnTest_Click(object sender, EventArgs e)
+        private async void btnTest_Click(object sender, EventArgs e)
         {
             ConfigurationBuilder configBuilder = new ConfigurationBuilder();
             configBuilder.AddUserSecrets(Assembly.GetExecutingAssembly());
@@ -29,7 +29,7 @@ namespace TestBench
 
             MetObsClient client = new MetObsClient(apiKey);
 
-            var stations = client.GetStations();
+            var stations = await client.GetStations();
             var sortedStations = stations.OrderBy(station => station.Name);
 
             tbResult.Text = "";
@@ -54,7 +54,7 @@ namespace TestBench
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnObservations_Click(object sender, EventArgs e)
+        private async void btnObservations_Click(object sender, EventArgs e)
         {
             ConfigurationBuilder configBuilder = new ConfigurationBuilder();
             configBuilder.AddUserSecrets(Assembly.GetExecutingAssembly());
@@ -63,7 +63,7 @@ namespace TestBench
 
             MetObsClient client = new MetObsClient(apiKey);
 
-            var observations = client.GetObservations(
+            var observations = await client.GetObservations(
                 stationId: "06056", 
                 fromDateTime: new DateTime(2022, 8, 1, 0, 0, 0, DateTimeKind.Local), 
                 toDateTime: new DateTime(2022, 8, 3, 0, 0, 0, DateTimeKind.Local),
