@@ -15,6 +15,11 @@ namespace TestBench
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for btnTest Clicked event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTest_Click(object sender, EventArgs e)
         {
             ConfigurationBuilder configBuilder = new ConfigurationBuilder();
