@@ -1,0 +1,3 @@
+[submodule "DmiDataLib"]
+	path = DmiDataLib
+	url = git@github.com:JonKrDk/DmiDataLib.git
