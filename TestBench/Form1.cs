@@ -26,9 +26,8 @@ namespace TestBench
             configBuilder.AddUserSecrets(Assembly.GetExecutingAssembly());
             IConfiguration config = configBuilder.Build();
             string apiKey = config.GetSection("MetObsV2")["ApiKey"];
-            string baseUrl = config.GetSection("MetObsV2")["BaseUrl"];
 
-            MetObsClient client = new MetObsClient(apiKey, baseUrl);
+            MetObsClient client = new MetObsClient(apiKey);
 
             var stations = client.GetStations();
             var sortedStations = stations.OrderBy(station => station.Name);
@@ -61,9 +60,8 @@ namespace TestBench
             configBuilder.AddUserSecrets(Assembly.GetExecutingAssembly());
             IConfiguration config = configBuilder.Build();
             string apiKey = config.GetSection("MetObsV2")["ApiKey"];
-            string baseUrl = config.GetSection("MetObsV2")["BaseUrl"];
 
-            MetObsClient client = new MetObsClient(apiKey, baseUrl);
+            MetObsClient client = new MetObsClient(apiKey);
 
             var observations = client.GetObservations(
                 stationId: "06056", 
