@@ -118,13 +118,13 @@ namespace TestBench
 
             int stationCount = 0;
 
-            DateTime startTime = new DateTime(2012, 1, 1, 0, 0, 0, 0, DateTimeKind.Local);
+            DateTime startTime = new DateTime(1972, 1, 1, 0, 0, 0, 0, DateTimeKind.Local);
             DateTime endTime = new DateTime(2021, 12, 31, 23, 59, 59, 0, DateTimeKind.Local);
 
             foreach (Station station in stationList.Values)
             {
                 int count = 0;
-                int limit = 10000;
+                int limit = 100000;
                 int offset = 0;
 
                 // if (station.Name == "Mejrup")
@@ -192,10 +192,10 @@ namespace TestBench
 
                     } while (count > 0);
 
-                    //if (stationCount >= 5)
-                    //{
-                    //    break;
-                    //}
+                    if (stationCount >= 5)
+                    {
+                        break;
+                    }
 
                 }
                 // Only take the first station
@@ -203,7 +203,7 @@ namespace TestBench
             }
 
 
-            StreamWriter streamWriter = new StreamWriter("C:\\Users\\Jon\\Desktop\\data.csv");
+            StreamWriter streamWriter = new StreamWriter("C:\\Users\\jkri\\Desktop\\data.csv");
 
             streamWriter.Write("Timestamp; Year");
             foreach (Station station in stationList.Values)
@@ -224,7 +224,6 @@ namespace TestBench
                 {
                     if (station.Parameters.Count > 0)
                     {
-
                         if (station.Parameters["temp_mean_past1h"].ObservationData.ContainsKey(time))
                         {
                             streamWriter.Write($";{station.Parameters["temp_mean_past1h"].ObservationData[time].Value}");
